@@ -1,21 +1,5 @@
-interface PhoneNumberDictionary {
-  [phone: string]: {
-    num: number;
-  };
-}
+import { Contact, PhoneType } from "./types";
 
-interface Contact {
-  name: string;
-  address: string;
-  phones: PhoneNumberDictionary;
-}
-
-// 제한된 문자열의 집합
-enum PhoneType {
-  Home = 'home',
-  Office = 'office',
-  Studio = 'studio'
-}
 // api
 function fetchContacts(): Promise<Contact[]> {
   const contacts: Contact[] = [
